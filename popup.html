@@ -1,9 +1,4 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
   <head>
     <title>Pythagorean Theorem Solver</title>
@@ -14,30 +9,25 @@
           padding-top: 20px;
           padding-bottom: 20px;
           background-color: #eee;
-          }
-
-          .form-signin {
           max-width: 400px;
           padding: 10px;
           margin: 0 auto;
           }
 
-          .form-signin .form-control {
+          input.integer {
           position: relative;
           height: auto;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;  
-            box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;  
+          box-sizing: border-box;
           padding: 10px;
           font-size: 16px;
+          margin: 10px
           }
 
-          
-
-          .form-signin input[type="text"] {
+          input[type="text"] {
+          margin-top: 10px;
           margin-bottom: 10px;
-
-
           border-bottom-right-radius: 0;
           border-bottom-left-radius: 0;
           }
@@ -49,71 +39,55 @@
           margin-left: auto;
           }
 
-          .form-signin input[type="button"] {
-          
+          button {
+          margin-top: 10px;
+          margin-bottom:10px;
+          max-width: 220px;
           display: inline-block;
           padding: 6px 12px;
-          margin-top: 10px;
           font-size: 14px;
           font-weight: normal;
           line-height: 1.42857143;
           text-align: center;
           white-space: nowrap;
           vertical-align: middle;
-            -ms-touch-action: manipulation;
-            touch-action: manipulation;
+          -ms-touch-action: manipulation;
+          touch-action: manipulation;
           cursor: pointer;
-            -webkit-user-select: none;
-               -moz-user-select: none;
-                -ms-user-select: none;
-                    user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
           background-image: none;
           border: 1px solid transparent;
           border-radius: 4px;
           display: block;
-          width: 100%;
+          width:100%;
           padding: 10px 16px;
           font-size: 18px;
-          line-height: 1.3333333;
           border-radius: 6px;
           }
-          
+
+          label{
+          margin: 10px;
+          }
+
       </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-
     <script src="popup.js"></script>
-
   </head>
     <body>
         <div class="container">
-
-          <form class="form-signin" id="integerInput">
-
-            <h2 class="form-signin-heading">Triangle Solver</h2>
-
+          <h2>Triangle Solver</h2>
             <label for="inputLegOne" class="sr-only">Leg 1</label>
-            <input type="text"  name="inputLegOne" class="form-control" placeholder="Enter Leg 1" required>
-
-<br>
-            <label for="inputLegTwo" class="sr-only">Leg 2</label>
-            <input type="text" name="inputLegTwo" class="form-control" placeholder="Enter Leg 2" required>
+            <input type="text"  name="inputLegOne" id="inputLegOne" class="integer" placeholder="Enter Leg 1" required>
             <br>
-
+            <label for="inputLegTwo" class="sr-only">Leg 2</label>
+            <input type="text" name="inputLegTwo" id="inputLegTwo" class="integer" placeholder="Enter Leg 2" required>
+            <br>
             <label for="inputHypotenuse" class="sr-only">Hypotenuse</label>
-            <input type="text" name="outputHypotenuse" class="form-control" placeholder="Solution" required>
-       
-
-          <input type="button" value="Solve" onClick="solverFunction(this.form)">
-          
-          </form>
-
-      </div> <!-- /container -->
-    </body>
+            <input type="text" id="text" name="outputHypotenuse" class="integer" placeholder="Solution" required>
+            <button> Solve </button>
+        </div> <!-- /container -->
+  </body>
 </html>
 
