@@ -1,3 +1,4 @@
-# image-search-extension
-Followed tutorial https://developer.chrome.com/extensions/getstarted
-First Extension
+# Triangle Solver
+Current;y can only do pythagorean theorem
+will add law of sin/cos functionality
+
