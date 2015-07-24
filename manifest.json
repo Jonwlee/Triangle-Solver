@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Triangle Calculator",
+  "description": "This extension allows one to calculate the side lengths, angles, and other properties of triangles", 
+  "version": "1.1",
+  "icons":{ 
+    "16": "Triangle.png",
+    "48": "Triangle.png",
+    "128":"Triangle.png" },
+  "author": "Jonathan Lee",
+  "browser_action": {
+    "default_icon": "Triangle.png",
+    "default_popup": "popup.html",
+    "default_title": "Pythagorem Theorem"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
